@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mineral Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header-Mineral" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="Mineral.html">Mineral Detection</a></h1>
+							<p>Your eyes under the ground.</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li>
+											<a href="#">Mineral Detection</a>
+											<ul>
+												<li><a href="Mineral.html">About</a></li>
+												<li><a href="https://sites.google.com/view/innovative-mining">Website</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Brain Nexus</a>
+											<ul>
+												<li><a href="Brain-Nexus.html">About</a></li>
+												<li><a href="https://www.instagram.com/brainexus/">Instagram</a></li>
+											</ul>
+										<li>
+										<li>
+											<a href="#">Health Mobile</a>
+											<ul>
+												<li><a href="Health.html">About</a></li>
+												<li><a href="https://www.instagram.com/brainexus/">Instagram</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Bitbolide</a>
+											<ul>
+												<li><a href="Bitbolide.html">About</a></li>
+												<li><a href="https://www.linkedin.com/company/bitbolide/?originalSubdomain=ca">LinkedIn</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="Images.html">Images</a></li>
+								<li><a href="Videos.html">Videos</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="wrapper style1">
+					<div class="title">Description</div>
+					<div class="container">
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<div id="content">
+										<article class="box post">
+											<header class="style1">
+												<h2>Data-driven AI model to identify prospective areas for mineral exploration</h2>
+<!--												<p>Tempus feugiat veroeros sed nullam dolore</p>-->
+											</header>
+											<a href="#" class="image featured">
+												<img src="images/headset.npg" alt="" />
+											</a>
+											<p> I developed a data-driven artificial intelligence model capable of predicting the concentration
+												of minerals on the Earth's surface at a given geographical location. I use a database that compiles
+												the information provided by mining companies during the last years of exploration. The data comprises
+												tabulated information about the collected bedrock samples containing sample coordinates, chemical
+												analysis results, and lithology. I also have a similar dataset consisting of sediment samples and
+												a high-resolution magnetic field map of Québec.</p>
+												<p>I use a transfer learning technique to extract features from the Magnetic Field, sediment samples,
+													and Lithology codes through a Convolutional Neural Network (CNN), a Graph Neural Network (GNN),
+													and an Artificial Neural Network (ANN), respectively, by keeping the last layer of each NN.
+													The CNN will transform the magnetic field image surrounding every sample into a vector of features.
+													Similarly, the GNN takes advantage of the spatial distribution of the samples to create a graph
+													and uses graph convolutions and some connected layers to transform graphs into vectors of
+													features—other features, consisting of the sample's distance to some. Finally, the ANN will
+													transform large binary vectors obtained from string lithology codes into smaller float feature vectors.
+													All features were used together to train a local ANN encoder-decoder (ANN-ED) and a local XGBoost encoder-decoder (XGB-ED).</p>
+											<p> The model's robustness is ensured through the most relevant and creative preprocessing tasks, including the meticulous imputation of
+												missing values and data cleaning (denoising). For missing values imputation, I use XGB-ED. Then, I denoise the data through an
+												iterative process: I train the ANN-ED model, clean, and retrain. This rigorous process results in a less noisy dataset and a more
+												effective encoder-decoder, guaranteeing the model's accuracy in the later modeling phase. </p>
+											<p> The novel model, which consists of a weighted aggregation grid model for step-forward prediction followed by a fixed-point
+												iteration correction using the ANN-ED, has demonstrated its predictive power. The results unequivocally show that the built
+												features are highly predictive. Fig 1 presents a concentration heatmap for a particular mineral, with a resolution of 50x50
+												meters per pixel. The yellow balls represent the rock samples used to train the ANN-ED, and the five colors represent five
+												different concentration ranges expressed in parts per billion.</p>
+
+										</article>
+										<div class="row gtr-150">
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<header>
+														<h2>Fig 1: Mineral Heatmap</h2>
+													</header>
+													<a class="image featured"><img src="images/Concentration.jpg" alt="" /></a>
+													<p>Prediction of the concentration of a particular mineral with a resolution of 50 meters per pixel.
+														The yellow balls represent the rock samples used to train the ANN-ED.
+														The five colors represent five different concentration ranges expressed in parts per billion.</p>
+<!--													<a href="#" class="button style1">More</a>-->
+												</section>
+											</div>
+											<div class="col-6 col-12-small">
+												<section class="box">
+													<header>
+														<h2>Fig 2: Modelling Pipeline</h2>
+													</header>
+													<a class="image featured"><img src="images/Mineral-Diagram.png" alt="" /></a>
+													<p> This schema resumes the three most important phases of this work.
+														Preprocessing, Feature Engineering and Modeling. </p>
+<!--													<a href="#" class="button style1">More</a>-->
+												</section>
+											</div>
+										</div>
+									</div>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<div id="sidebar">
+										<section class="box">
+											<header>
+												<h2>Some result in images</h2>
+											</header>
+											<p>Here we show some project preprocessing images</p>
+											<a href="#" class="button style1">Learn More</a>
+										</section>
+
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
